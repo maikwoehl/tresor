@@ -1,0 +1,55 @@
+{
+    "configurations": [
+        {
+            "name": "ATtiny817-AVRGCC",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Program Files (x86)/Atmel/Studio/7.0/toolchain/avr8/avr8-gnu-toolchain/**"
+            ],
+            "defines": [
+                "__GNUC__=5",
+                "__GNUC_MINOR__=4",
+                "__ATtiny817__",
+                "__AVR_ATtiny817__",
+                "__AVR_DEV_LIB_NAME__=tn817"
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++03",
+            "intelliSenseMode": "gcc-x86",
+            "compilerPath": "/usr/share/avr/bin/avr-gcc"
+        },
+        {
+            "name": "ATtiny817-ICCAVR",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/share/avr/avr/include/**"
+            ],
+            "defines": [
+                "__ICCAVR__",
+                "__IAR_SYSTEMS_ICC__",
+                "__ATmega8__",
+                "__AVR_ATmega8__"
+            ],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "gcc-x86",
+            "compilerPath": "/usr/share/avr/bin/avr-gcc"
+        },
+        {
+            "name": "ATMega8",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/share/avr/avr/include/**"
+            ],
+            "defines": [
+                "__ATmega8__",
+                "__AVR_ATmega8__"
+            ],
+            "compilerPath": "/usr/share/avr/bin/avr-gcc",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x86"
+        }
+    ],
+    "version": 4
+}
