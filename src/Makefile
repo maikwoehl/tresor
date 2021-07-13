@@ -3,7 +3,7 @@
 # Edit the settings to your needs
 
 # Your project name (no whitespace)
-PROJECT 	= Matrix
+PROJECT 	= tresor
 # Programmer device
 PORT 		= /dev/ttyACM0
 # Compiler target (avr-gcc)
@@ -26,7 +26,7 @@ DUDE 			= /usr/bin/avrdude
 # 
 # Example:
 # MODULES = fourier integration 
-MODULES = future
+MODULES = future leds coil reset_btn
 
 # Any c libs that you wand to include
 # Example:
@@ -37,8 +37,8 @@ LIBS=
 
 # TOOLCHAIN LINKS
 LIBC = $(AVR_TOOLCHAIN)/avr/include
-CC = avr-gcc
-LD = avr-objcopy
+CC = $(AVR_TOOLCHAIN)/bin/avr-gcc
+LD = $(AVR_TOOLCHAIN)/bin/avr-objcopy
 
 # SEARCH PATHS
 DOCDIR = ../doc/doxygen/out
