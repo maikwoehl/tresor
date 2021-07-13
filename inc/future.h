@@ -8,6 +8,11 @@ extern int main();
 extern void setup (void);
 extern void loop  (void);
 
+#ifndef FUTURE_H_
+#define FUTURE_H_
+
 void delay (double ms);
 void delay_us (double us);
+
+#endif
 

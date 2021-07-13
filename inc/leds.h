@@ -1,5 +1,8 @@
 #include <stdint.h>
 
+#ifndef LEDS_H
+#define LEDS_H_
+
 #define LEDDDR      DDRC
 #define LEDPORT     PORTC
 #define LEDRED      (1<<PC1)
@@ -8,3 +11,5 @@
 
 void led_init();
 void led_set(uint8_t led_bits, uint8_t state);
+
+#endif

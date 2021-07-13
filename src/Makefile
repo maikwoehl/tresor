@@ -26,7 +26,7 @@ DUDE 			= /usr/bin/avrdude
 # 
 # Example:
 # MODULES = fourier integration 
-MODULES = future leds coil reset_btn
+MODULES = future leds coil reset_btn keyboard batsens buzzer
 
 # Any c libs that you wand to include
 # Example:
