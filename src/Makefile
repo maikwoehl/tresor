@@ -37,8 +37,8 @@ LIBS=
 
 # TOOLCHAIN LINKS
 LIBC = $(AVR_TOOLCHAIN)/avr/include
-CC = $(AVR_TOOLCHAIN)/bin/avr-gcc
-LD = $(AVR_TOOLCHAIN)/bin/avr-objcopy
+CC = avr-gcc
+LD = avr-objcopy
 
 # SEARCH PATHS
 DOCDIR = ../doc/doxygen/out
