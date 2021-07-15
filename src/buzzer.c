@@ -16,12 +16,15 @@ void buzzer_init()
     TCCR1B |= (1<<WGM12);
     // Set Prescaler to 1
     TCCR1B |= (1<<CS10);
+    // Set BOTTOM to 0
+    TCNT1H = 0x00;
+    TCNT1L = 0x00;
 }
 
 void buzzer_start(uint16_t freq)
 {
     uint16_t tone = (uint16_t) FREQUENCY(freq);
-    // Set high and low byte of OCR1A register
+    // Set high and low byte of OCR1A register as TOP
     OCR1AL = tone & 0xFF;
     OCR1AH = (tone & 0xFF00) >> 8;
     // Enable timer interrupt
