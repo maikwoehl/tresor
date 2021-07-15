@@ -8,7 +8,7 @@
 #define BATSENSPIN  PINB
 #define BATSENS     (1<<PB1);
 
-void reset_batsens_init();
-uint8_t reset_batsens_read();
+void batsens_init();
+uint8_t batsens_read();
 
 #endif

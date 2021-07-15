@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "future.h": "c"
+        "future.h": "c",
+        "batsens.h": "c",
+        "reset_btn.h": "c",
+        "keyboard.h": "c"
     }
 }

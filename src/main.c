@@ -15,9 +15,11 @@
 #include "../inc/keyboard.h"
 
 void setup(void) {
-
+    coil_init();
+    led_init();
+    reset_btn_init();
+    batsens_init();
 }
 
 void loop(void) {
-
 }
