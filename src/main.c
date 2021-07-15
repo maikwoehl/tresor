@@ -19,6 +19,8 @@ void setup(void) {
     led_init();
     reset_btn_init();
     batsens_init();
+    buzzer_init();
+    keyboard_init();
 }
 
 void loop(void) {
