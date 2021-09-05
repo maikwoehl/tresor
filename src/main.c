@@ -8,6 +8,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/sleep.h>
 
 #include "../inc/future.h"
 #include "../inc/coil.h"
@@ -51,12 +52,39 @@ void setup(void) {
 }
 
 void loop(void) {
+    static uint16_t counter = 0; 
+    static uint8_t is_active = 0;
     if (g_timer0)
     {
         g_timer0 = 0;
-        g_reset_btn_count++;
         // DO YOUR STUFF BELOW
 
-        
+        if ( (keyboard_get_key_code() & 0xFF) != 0)
+        {
+            is_active = 1;
+
+            // TODO: Handle keycode
+
+            // TODO: signal processing end    
+        }
+
+        if (counter >= 6)
+        {
+            counter = 0;
+
+            if (!is_active)
+            {
+                // TODO: Disable Timer1 and set Timer0 to very slow interrupt rate
+                sleep_mode(); 
+                // TODO: Enable Timer1 and set Timer0 to default interrupt rate
+            }
+                
+        }
+
+        // DO YOUR STUFF ABOVE
+        g_reset_btn_count++;
+        counter++;
     }
+
+    // TODO: Power-down mode with INT1 external interrupt?
 }
